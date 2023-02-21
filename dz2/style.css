@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
+body {
+    margin: 0 auto;
+    font-family: 'Play', sans-serif;
+}
+
+main {
+    font-size: 20px;
+}
+
+p {
+    margin: 0;
+}
+
+header {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.header_wrapper {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    gap: 300px;
+    margin: 0 auto;
+}
+
+header img {
+    height: 60px;
+    padding-top: 8px;
+}
+
+footer {
+    height: 86px;
+    margin-top: 15px;
+}
+
+footer p {
+    font-size: 26px;
+    text-align: center;
+    padding-top: 25px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body>footer {
+    position: sticky;
+    top: 100vh;
+}
+
+.form__wrapper {
+    width: 485px;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: rgba(196, 189, 221, 0.674);
+    border-radius: 15px;
+}
+
+.form__label {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.label__input {
+    width: 450px;
+    margin-top: 10px;
+    border: none;
+    border: 2px solid rgb(63, 44, 127);
+}
+
+.label__textarea {
+    width: 450px;
+    margin-top: 10px;
+    border: none;
+    border: 2px solid rgb(63, 44, 127);
+}
+
+.label__select {
+    margin-top: 10px;
+    width: 200px;
+    border: none;
+    border: 2px solid rgb(63, 44, 127);
+}
+
+.form__checkbox {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.form__checkbox input {
+    margin-top: 10px;
+}
+
+input,
+select,
+textarea {
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.checkbox__custom>input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.checkbox__custom>span {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.checkbox__custom>span::before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid rgb(63, 44, 127);
+    border-radius: 5px;
+    margin-right: 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50% 50%;
+}
+
+.checkbox__custom>input:checked+span::before {
+    border-color: rgb(63, 44, 127);
+    background-color: rgb(63, 44, 127);
+    background-image: url(../img/галочка.svg);
+}
+
+.form__button {
+    margin: 0 auto;
+    display: block;
+    font-size: 18px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    background-color: white;
+    border: 3px solid rgb(63, 44, 127);
+    border-radius: 10px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.form__button:hover {
+    background-color: rgb(63, 44, 127);
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.link__wrapper {
+    width: 1200px;
+    margin-left: auto;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.link a {
+    display: inline-block;
+    background: rgba(196, 189, 221, 0.674);
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.arrow {
+    width: 70px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.function {
+    width: 100%;
+    display: flex;
+}
+
+.function_text {
+    margin: auto;
+    margin-top: 10px;
+    border: none;
+    border: 2px solid rgb(63, 44, 127);
+}
+

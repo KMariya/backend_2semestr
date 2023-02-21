@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Лабораторная №2</title>
+</head>
+
+<body>
+    <header>
+        <div class="header_wrapper">
+            <img src="img/123.jpg" alt="logo">
+            <h1>ДЗ №2 Feedback form</h1>
+        </div>
+    </header>
+    <main>
+        <section class="form">
+            <div class="form__wrapper">
+                <form method="post" action="https://httpbin.org/post">
+                    <label class="form__label label">
+                        <span>Имя</span>
+                        <input class="label__input" type="text" name="name" id="" placeholder="Введите ваше имя"
+                            required>
+                    </label>
+                    <label class="form__label label">
+                        <span>Почта</span>
+                        <input class="label__input" type="email" name="e-mail" id="" placeholder="Введите вашу почту"
+                            required>
+                    </label>
+                    <label class="form__label label">
+                        <span>Вид обращения</span>
+                        <select name="select" class="label__select">
+                            <option name="good">Благодарность</option>
+                            <option name="bad">Жалоба</option>
+                            <option name="qustions">Предложение</option>
+                        </select>
+                    </label>
+                    <label class="form__label label">
+                        <span>Ваш комментарий</span>
+                        <textarea class="label__textarea" name="text" id="" cols="30" rows="10"></textarea>
+                    </label>
+                    <div class="form__checkbox checkbox">
+                        <span>Вариант ответа</span>
+                        <label class="checkbox__custom">
+                            <input type="checkbox" name="sms">
+                            <span>СМС</span>
+                        </label>
+                        <label class="checkbox__custom">
+                            <input type="checkbox" name="mail">
+                            <span>Почта</span>
+                        </label>
+                    </div>
+                    <button class="form__button" type="submit">Отправить</button>
+                </form>
+            </div>
+        </section>
+        <section class="link">
+            <div class="link__wrapper">
+                <span>Перейти на вторую страницу и посмотреть результат функции get_headers</span>
+                <a href="back.php"><img class="arrow" src="img/arrow.svg" alt="arrow"></a>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <p>Выполнила студентка группы 221-322 Кожаринова Мария Павловна</p>
+    </footer>
+</body>
+
+</html>
