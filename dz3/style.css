@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
+body {
+    margin: 0 auto;
+    font-family: 'Play', sans-serif;
+    
+}
+p {
+    margin-top: 5px;
+}
+
+
+
+header {
+    margin: 5px 100px;
+}
+
+.header_wrapper {
+    width: 100%;
+    display: flex;
+}
+
+h1 {
+    margin-left: auto;
+}
+
+header img {
+    height: 60px;
+    padding-top: 8px;
+}
+
+footer {
+    height: 86px;
+    margin-top: 15px;
+}
+
+footer p {
+    font-size: 26px;
+    text-align: center;
+    padding-top: 25px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body>footer {
+    position: sticky;
+    top: 100vh;
+}
+
+
+.main_wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 24px;
+}
+
+span {
+    font-size: 28px;
+    color: rgb(45, 39, 108);
+    font-weight: 900;
+    font-style: italic;
+}
+
+.equat {
+    font-size: 24px;
+    border: 3px solid rgb(31, 21, 137);
+    border-radius: 10px;
+    padding: 15px 11px;
+}
+
+.button {
+    font-size: 20px;
+    border: 3px solid rgb(31, 21, 137);
+    border-radius: 10px;
+    padding: 8px 10px;
+    margin-left: 30px;
+    transition-duration: 0.3s;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: rgba(31, 21, 137, 0.365);
+    transition-duration: 0.3s;
+}
+
+.text_answer {
+    margin-top: 30px;
+
+}
+
+.res_answer {
+    width: 180px;
+    margin: 0 auto;
+    margin-top: 10px;
+    font-size: 20px;
+    border: 3px solid rgb(31, 21, 137);
+    background-color: rgba(31, 21, 137, 0.365);
+    border-radius: 10px;
+    padding: 8px 10px;
+    resize: none;
+    font-size: 24px;
+    
+}
+
+input {
+    font-family: 'Play', sans-serif;
+}
