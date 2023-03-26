@@ -23,7 +23,7 @@
             <p>где x - неизменный</p>
             <form method="POST">
                 <div class="inputs">
-                    <input class="equat" type="text" name="equation" placeholder="Введите уравнение">
+                    <input class="equat" type="text" name="equation" placeholder="10+x=33">
                     <input class="button" type="submit" value="Решить">
                 </div>
 
@@ -32,37 +32,31 @@
             <textarea readonly class="res_answer" name="answer">
         <?php
         if (!empty($_POST)) {
-            $equation = $_POST["equation"];
-            $equation = str_replace(' ', '', $equation);
-            function getOperand($num)
-            {
-                if (strpbrk($num, '=') == TRUE) {
-                    $num = str_replace('=', '', $num);
-                    return (int)$num;
-                }
+            $input = $_POST['equation'];
+            $input = str_replace(' ', '', $input);
+        if (strpos($input, '=') !== false) {
+            $parts = explode("=", $input);
+            $leftPart = $parts[0]; 
+            $leftNumber = intval($leftPart); 
+            $rightPart = $parts[1];
+            $rightNumber = intval($rightPart);
+            $left = preg_split('/(\d+)([\+\-\*\/])([x])/i', $leftPart, -1, PREG_SPLIT_DELIM_CAPTURE);
+            $op = $left[2];
+            if ($op == "+"){
+                $x = $rightNumber - $leftNumber;
             }
-            function getOperator($num)
-            {
-                if (strpbrk($num, '+') == TRUE) {
-                    return 0;
-                }
-                if (strpbrk($num, '-') == TRUE) {
-                    return 1;
-                }
+            elseif ($op == "-"){
+                $x = $leftNumber - $rightNumber;
             }
-            switch (getOperator($equation)) {
-                case 0:
-                    $op1 = strstr($equation, '+', true);
-                    $op2 = getOperand(strstr($equation, '='));
-                    echo $result = $op2 - $op1;
-                    break;
-                case 1:
-                    $op1 = strstr($equation, '-', true);
-                    $op2 = getOperand(strstr($equation, '='));
-                    echo $result = - ($op2 - $op1);
-                    break;
+            elseif ($op == "/"){
+                $x = $leftNumber / $rightNumber;
             }
-        };
+            elseif ($op == "*"){
+                $x = $rightNumber / $leftNumber;
+            }
+            echo $x;
+            }
+        }
         ?>
         </textarea>
         </div>
