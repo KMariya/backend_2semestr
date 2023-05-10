@@ -14,12 +14,12 @@ body {
   cursor: pointer;
   width: fit-content;
   padding: 7px 12px;
-  margin-top: 10px;
   border-radius: 12px;
   background-color: rgb(197, 255, 205);
   border: 2px solid black;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
+  
 }
 
 .btn:hover, .btn:hover {
@@ -40,6 +40,11 @@ input {
 
 .btn-2 {
   background-color: rgb(255, 206, 212);
+  margin-top: 10px;
+}
+
+.btn-1 {
+  margin-top: 10px;
 }
 
 .btn-2:hover {
@@ -47,6 +52,7 @@ input {
 }
 
 .btn-exit {
+
   border: none;
   background-color: rgb(222, 222, 222);
   color: rgb(86, 86, 86);
@@ -56,4 +62,33 @@ input {
 
 .btn-exit:hover {
   background-color: rgb(187, 186, 186);
+}
+
+.select__list {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+select {
+  padding: 8px 12px;
+  border-radius: 3px;
+  border: 2px solid rgb(50, 134, 61);
+  width: 180px;
+}
+
+.con-dlt button {
+  background: none;
+  border: none;
+  color: red;
+  opacity: 0;
+  transition: .3s;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.con-dlt:hover button {
+  opacity: 1;
+  transition: .3s;
 }
